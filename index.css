@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@theme {
+  --color-espresso: #3b2418;
+  --color-tan: #b98a5a;
+  --color-cream: #f6f0e6;
+  --color-ink: #16110d;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+body { @apply bg-cream text-ink font-sans antialiased; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.reveal { animation: fadeUp .7s ease both; }
+.btn { @apply inline-flex items-center justify-center gap-2 bg-espresso text-cream px-6 py-3 text-sm tracking-widest uppercase transition hover:bg-tan; }
+.btn-outline { @apply border border-espresso bg-transparent text-espresso hover:text-cream; }
+.input { @apply w-full border border-espresso/20 bg-white/60 px-4 py-3 outline-none focus:border-tan; }
